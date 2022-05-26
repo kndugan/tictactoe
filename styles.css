@@ -1,42 +1,54 @@
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+  padding: 5px;
+
+}
+
 button {
-  background-color: #0c80f3;
-  border: 6px solid #0ff166;
+  background-color: #333;
+  border: 6px solid whitesmoke;
   border-radius: 10px;
 }
 
 .game-board {
-  width: 600px;
-  height: 600px;
-  margin: 0 auto;
-  background-color: #34495e;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  margin: 5px auto;
+  background-color: #999;
   color: rgb(204, 28, 28);
-  border: 6px solid #0b0d0f;
+  border: 5px solid #0b0d0f;
   border-radius: 10px;
   display: grid;
+  font-family: 'Jost', sans-serif;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr;
 }
 
 .grid-row {
-  border: 6px solid #739dc7;
-  border-radius: 6px;
-  font-family: Helvetica;
+  border: 3px solid #000;
+  border-radius: 3px;
+  font-family: 'Jost', sans-serif;
   font-weight: bold;
   font-size: 4em;
   display: grid;
+  padding: 0;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgb(175, 70, 70);
+  background-color: #999;
 }
 
-.block {
+/* .block {
   background-color: rgb(219, 28, 28);
   border: 6px solid green;
   border-radius: 6px;
   font-family: Helvetica;
   font-weight: bold;
   font-size: 20em;
-}
+} */
 
 .red {
   color: red;
@@ -44,4 +56,10 @@ button {
 
 .white {
   color: white;
+}
+
+.footer {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
 }

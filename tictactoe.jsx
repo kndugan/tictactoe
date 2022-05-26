@@ -3,12 +3,11 @@ const Board = () => {
   // State keeps track of next player and gameState
   const [player, setPlayer] = React.useState(1);
   const [gameState, setGameState] = React.useState([]);
-  let status = `Winner is ${checkForWinner(gameState)}`;
-  
+  let status = `Winner is: ${checkForWinner(gameState)}`;
 
   // Part 1 step 1 code goes here
   // Use conditional logic to set a variable to either 'Player O' or  'Player X'
-  let nextPlayer = (player === 1) ? "Player X" : "Player O";
+  let playerTurn = `Next Player: ${player == '0' ? 'Player O' : 'Player X'}`;
 
   console.log(`We have a winner ${status}`);
 
@@ -40,11 +39,7 @@ const Board = () => {
         {renderSquare(8)}
       </div>
       <div id="info">
-        {/* 
-          Part 1 step 2 code goes here 
-          Display the player's turn <h1>
-        */}
-        <h1 id="turn">Next Player: {nextPlayer}</h1>
+        <h1 id="turn">{playerTurn}</h1>
         <h1>{status}</h1>
       </div>
     </div>
@@ -63,7 +58,7 @@ const Square = ({ takeTurn, id }) => {
   return (
     <button
       // Part 2: update the return statement below to add css classes
-      className={tik === 1 ? 'red' : 'white'}
+      className={tik == '1' ? 'red' : 'white'}
       onClick={() => {
         setTik(takeTurn(id));
         setFilled(true);
@@ -86,7 +81,7 @@ const Game = () => {
 // Checking for Winner takes a bit of work
 // Use JavaScript Sets to check players choices
 // against winning combinations
-// Online there is more compact version but Dr. Williams prefers this one
+// Online there is more compact version but I prefer this one
 
 const win = [
   // rows
@@ -110,6 +105,7 @@ const checkForWinner = (gameState) => {
   // get array of box id's
   // can't be a winner in less than 5 turns
   if (gameState.length < 5) return 'No Winner Yet';
+  if (gameState.length === 9) return 'Oops! It\'s a Draw 🤷';
   let p0 = gameState.filter((item) => {
     if (item.player == 0) return item;
   });
@@ -126,8 +122,8 @@ const checkForWinner = (gameState) => {
       return isSuperset(new Set(px), new Set(item));
     });
   }
-  if (win0.length > 0) return 'Player O ';
-  else if (winX.length > 0) return 'Player X ';
+  if (win0.length > 0) return 'Player O Congratulations! 🎉 ';
+  else if (winX.length > 0) return 'Player X Congratulations! 🎉';
   return 'No Winner Yet';
 };
 // check if subset is in the set
