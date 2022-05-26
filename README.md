@@ -4,7 +4,7 @@
 
 In this project, I've used React to create a Tic Tac Toe game. Each Player will have alternate turns to place an X or O on the board. The first player to get 3 X's or O's in a row is the winner.
 
-The starter code was provided by MIT xPro.
+The starter code was provided by MIT xPro and React.
 
 ## How to Run
 
@@ -20,9 +20,9 @@ Connect with me on [Twitter](https://twitter.com/kristinedugan) or [LinkedIn](ht
 
 ## License Information
 
-Some implementations and solutions in this project are derived from the provided lectures and materials of [50 Days React Bootcamp](https://www.udemy.com/course/build-real-world-react-programming-projects/) by [Sufa Digital Media](https://www.udemy.com/user/sufa-digital-media/) on [Udemy](https://www.udemy.com/).
+Some implementations and solutions in this project are derived from the provided lectures and materials of MIT xPro's MERN Stack Bootcamp course.
 
-[React App](https://github.com/facebook/create-react-app) was used in creating this app.
+[React](https://github.com/facebook/create-react-app) was used to create this app.
 
 ### MIT License
 
