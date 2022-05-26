@@ -103,7 +103,7 @@ const checkPlayerTurn = (gameState) => {
 
 const checkForWinner = (gameState) => {
   // get array of box id's
-  // can't be a winner in less than 5 turns
+  // can't be a winner in less than 5 turns and draw if no winner in 9 turns
   if (gameState.length < 5) return 'No Winner Yet';
   if (gameState.length === 9) return 'Oops! It\'s a Draw 🤷';
   let p0 = gameState.filter((item) => {
